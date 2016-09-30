@@ -42,29 +42,27 @@ public class SeguridadSocialHashMap {
     }
 
     public List<Persona2> obtenerPersonasRangoSalarial(double min, double max) {
-        List<Persona2> rango = new ArrayList<>();
+        List<Persona2> aux = new ArrayList<>();
 
-
-        for (int i = 0; i < personaMapSalario.size(); i++) {
-            if (personaMapSalario.get(i).getSalario() > min || personaMapSalario.get(i).getSalario() < max) {
-                rango.add(personaMapSalario.get(i));
+        for (Persona2 persona: personaMapDni.values()
+                ) {
+            if(persona.getSalario()>= min && persona.getSalario()<=max){
+                aux.add(persona);
             }
-
         }
-        return rango;
+        return aux;
         }
     public List<Persona2> obtenerPersonasMayoresQue(int edad){
 
-        List<Persona2> rango = new ArrayList<>();
+        List<Persona2> aux = new ArrayList<>();
 
-
-        for (int i = 0; i < personaMapDni.size(); i++) {
-            if (personaMapDni.get(i).getEdad() > edad ) {
-                rango.add(personaMapDni.get(i));
+        for (Persona2 persona: personaMapDni.values()
+                ) {
+            if(persona.getSalario()>= edad){
+                aux.add(persona);
             }
-
         }
-        return rango;
+        return aux;
 
 
     }

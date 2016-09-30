@@ -13,24 +13,23 @@ public class Main {
 
         seguridadSocial.altaPersona(jose);
         seguridadSocial.altaPersona(maria);
-        seguridadSocial.altaPersona(carlos);
+       seguridadSocial.altaPersona(carlos);
         seguridadSocial.altaPersona(anna);
-       // System.out.println("Altas a la seguridad social: " + seguridadSocial.obtenerTodas());
+        System.out.println("Altas a la seguridad social: " + seguridadSocial.obtenerTodas());
 
 
         System.out.println("Baja a la seguridad social: " + anna.toString());
         seguridadSocial.bajaPersona(anna.getDni());
 
 
-      //System.out.println("Lista de afiliados a la S.S.: " + seguridadSocial.obtenerTodas());
+      System.out.println("Lista de afiliados a la S.S.: " + seguridadSocial.obtenerTodas());
 
         System.out.println("obtenerPersonaPorDNI: " + seguridadSocial.obtenerPersonaPorDNI(jose.getDni()));
-
         System.out.println("obtenerPersonaPorNumSS: " + seguridadSocial.obtenerPersonaPorNumSS(maria.getNumss()));
 
         System.out.println("obtenerPersonasRangoSalarial: " +seguridadSocial.obtenerPersonasRangoSalarial(23000.00, 45000.00));
 
-      // System.out.println("obtenerPersonasMayoresQue: " + seguridadSocial.obtenerPersonasMayoresQue(25));
+       System.out.println("obtenerPersonasMayoresQue: " + seguridadSocial.obtenerPersonasMayoresQue(25));
 
 
 
