@@ -1,11 +1,6 @@
+import java.util.*;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.ArrayList;
-/**
- * Created by usu26 on 23/09/2016.
- */
+
 public class SeguridadSocialHashMap {
 
 
@@ -58,6 +53,24 @@ public class SeguridadSocialHashMap {
         }
         return rango;
         }
+    public List<Persona2> obtenerPersonasMayoresQue(int edad){
+
+        List<Persona2> rango = new ArrayList<>();
+
+
+        for (int i = 0; i < personaMapDni.size(); i++) {
+            if (personaMapDni.get(i).getEdad() > edad ) {
+                rango.add(personaMapDni.get(i));
+            }
+
+        }
+        return rango;
+
+
+    }
+    public List<Persona2> obtenerTodas(){
+        return new ArrayList<>(personaMapDni.values());
+    }
 
 
     }
